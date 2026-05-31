@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+
+
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
+}
+
+.frame {
+    text-align: center;
+    color: white;
+    padding: 0 10px 0 10px;
+    width: 200px;
+}
+
+.title {
+    
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.out {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.12);
+    font-weight: bold;
+}
+
+button {
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #3b82f6;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

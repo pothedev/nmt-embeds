@@ -1,73 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .box {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    input {
-      width: 80px;
-      padding: 6px;
-    }
-  </style>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<div class="box">
+<div class="frame">
+  <div class="title">Math</div>
+
   <input id="val" type="number" placeholder="Points">
-  <button onclick="calc()">OK</button>
-  <div id="out">—</div>
+
+  <div id="out" class="out">—</div>
+
+  <button onclick="calc()">Convert</button>
 </div>
 
 <script>
   const table = {
-    5: 100,
-    6: 108,
-    7: 115,
-    8: 123,
-    9: 131,
-    10: 134,
-    11: 137,
-    12: 140,
-    13: 143,
-    14: 145,
-    15: 147,
-    16: 148,
-    17: 149,
-    18: 150,
-    19: 151,
-    20: 152,
-    21: 155,
-    22: 159,
-    23: 163,
-    24: 167,
-    25: 170,
-    26: 173,
-    27: 176,
-    28: 180,
-    29: 184,
-    30: 189,
-    31: 194,
-    32: 200
+    5: 100, 6: 109, 7: 118, 8: 125, 9: 131,
+    10: 134, 11: 137, 12: 140, 13: 143, 14: 145,
+    15: 147, 16: 148, 17: 149, 18: 150, 19: 151,
+    20: 152, 21: 156, 22: 160, 23: 164, 24: 166,
+    25: 169, 26: 173, 27: 176, 28: 179, 29: 184,
+    30: 189, 31: 194, 32: 200
   };
 
   function calc() {
     const v = parseInt(document.getElementById("val").value);
-    document.getElementById("out").innerText =
-      table[v] ?? "—";
+    document.getElementById("out").innerText = table[v] ?? "—";
   }
 </script>
 

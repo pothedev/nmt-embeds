@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="frame">
+  <div class="title">History</div>
+
+  <input id="val" type="number" placeholder="Points">
+
+  <div id="out" class="out">—</div>
+
+  <button onclick="calc()">Convert</button>
+</div>
+
+<script>
+  const table = {
+    9: 100, 10: 105, 11: 110, 12: 115, 13: 120,
+    14: 125, 15: 130, 16: 132, 17: 134, 18: 136,
+    19: 138, 20: 140, 21: 141, 22: 142, 23: 143,
+    24: 144, 25: 145, 26: 146, 27: 147, 28: 148,
+    29: 149, 30: 150, 31: 151, 32: 152, 33: 154,
+    34: 156, 35: 158, 36: 160, 37: 163, 38: 166,
+    39: 168, 40: 169, 41: 170, 42: 172, 43: 173,
+    44: 175, 45: 177, 46: 179, 47: 181, 48: 183,
+    49: 185, 50: 188, 51: 191, 52: 194, 53: 197,
+    54: 200
+    };
+
+  function calc() {
+    const v = parseInt(document.getElementById("val").value);
+    document.getElementById("out").innerText = table[v] ?? "—";
+  }
+</script>
+
+</body>
+</html>
